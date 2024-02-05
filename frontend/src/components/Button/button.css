@@ -1,0 +1,30 @@
+/* .bfe-btn {
+    padding: 12px 8px;
+    height: 52px;
+    background-color: #222222;
+    color:
+     aliceblue;
+}
+
+.bfe-btn:hover{
+    background-color: #222222;
+    color: rgb(228, 230, 231);
+} */
+
+.bfe-btn button {
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding: 0px 22px;
+}
+ button:hover{
+    background-color: #222;
+}

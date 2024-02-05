@@ -1,0 +1,31 @@
+.contact_card {
+    background-color: #fff;
+    padding: 16px 16px;
+    margin-top: 16px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12); 
+
+
+}
+
+.contact_card, .action , .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+    text-transform: capitalize;
+
+}
+.info {
+    gap: 16px;
+    overflow-x: auto;
+    
+}
+.info .name {
+    cursor: pointer;
+}
+
+.action_icon{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

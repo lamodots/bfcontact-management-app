@@ -1,0 +1,9 @@
+.alert {
+    background-color: #FDF8DF;
+    padding: 24px;
+    border-left-width: 2px;
+    border-left-style: solid;
+    text-align: center;
+    transition: ease-in 8s;
+    transform: scale(1, 1);
+}

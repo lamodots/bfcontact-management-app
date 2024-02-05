@@ -1,0 +1,53 @@
+nav {
+    display: flex;
+    padding: 0 240px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+main {
+    padding: 80px 240px;
+    
+    
+}
+nav button {
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 8px 22px;
+  
+}
+ button:hover{
+    background-color: #222;
+}
+.addIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.no_contact {
+    text-align: center;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:1024px){
+  
+    nav{
+        padding: 0 32px;
+
+    }
+    main {
+        padding: 80px 16px;
+    }
+}
