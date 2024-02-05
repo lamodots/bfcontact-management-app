@@ -15,9 +15,9 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5); // Set the number of items to display per page
+  // Set the number of items to display per page
+  const [itemsPerPage] = useState(3); 
   const { currentUser } = useContext(userContext);
-
   const navigate = useNavigate();
 
   // Redirect to login page for any user who isn't logged in
@@ -37,6 +37,8 @@ function Dashboard() {
           }
         });
         setContacts(response.data.data);
+        // Set filteredContacts initially with all contacts
+        setFilteredContacts(response.data.data); 
       } catch (error) {
         console.log(error);
       }
@@ -48,11 +50,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8800/contacts/${id}`, {
-        headers: {
-          Authorization: `BEARER ${currentUser.token}`
-        }
-      });
+      await axios.delete(`http://localhost:8800/contacts/${id}`);
       // Remove the deleted contact from the state
       setContacts((prevContacts) => prevContacts.filter((contact) => contact._id !== id));
       setFilteredContacts((prevContacts) => prevContacts.filter((contact) => contact._id !== id));
@@ -68,7 +66,8 @@ function Dashboard() {
       `${contact.firstname} ${contact.middlename} ${contact.surname}`.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setFilteredContacts(filtered);
-    setCurrentPage(1); // Reset to the first page when performing a new search
+    // Reset to the first page when performing a new search
+    setCurrentPage(1); 
   };
 
   // Calculate the index of the last item to display on the current page
@@ -117,7 +116,7 @@ function Dashboard() {
         {/* Pagination buttons */}
         <div className='pagination'>
           {Array.from({ length: Math.ceil(filteredContacts.length / itemsPerPage) }).map((_, index) => (
-            <button key={index + 1} onClick={() => paginate(index + 1)}>
+            <button key={index + 1} onClick={() => paginate(index + 1)}  className={currentPage === index + 1 ? 'activePage' : null}>
               {index + 1}
             </button>
           ))}

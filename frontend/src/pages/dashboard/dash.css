@@ -40,7 +40,37 @@ nav button {
     text-align: center;
     font-size: 14px;
 }
+.search-container  input {
+    padding: 8px 22px ;
+    height: 40px;
+    border:none;
+    outline: none;
+    border-radius: 8px;
+}
+.search-container  input:focus{
+    border: 1px rgb(127, 127, 230) solid;
+   
+}
 
+.pagination {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+}
+.pagination button{
+  padding: 4px 8px;
+  cursor: pointer;
+  border: none;
+}
+.pagination button:hover{
+    color: #ffffff;
+}
+
+.activePage {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
 @media only screen and (max-width:1024px){
   
     nav{

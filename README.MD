@@ -23,3 +23,4 @@ Manage your contacts with our comprehensive Contact Management App! This powerfu
     -   Install packages `yarn`
     -   Add environment variables 
     -   Start app `yarn dev`
+    -   Access: `localhost:port/directory/login`
