@@ -24,3 +24,9 @@ Manage your contacts with our comprehensive Contact Management App! This powerfu
     -   Add environment variables 
     -   Start app `yarn dev`
     -   Access: `localhost:port/directory/login`
+
+    ![Local Image]('./frontend/src/bferegister.PNG)
+    ![Local Image]('./frontend/src/bfelogin.PNG)
+    ![Local Image]('./frontend/src/bfedashboard.PNG)
+
+   [ ![video]('./frontend/src/bferegister.PNG)](https://youtu.be/TyQu3mBhVas)

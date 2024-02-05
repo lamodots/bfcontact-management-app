@@ -25,7 +25,7 @@ function Dashboard() {
     if (!currentUser?.token) {
       navigate('/directory/login');
     }
-  }, [currentUser, navigate]);
+  }, [currentUser]);
 
   useEffect(() => {
     const fetchContacts = async () => {
@@ -46,7 +46,7 @@ function Dashboard() {
     };
 
     fetchContacts();
-  }, [currentUser.token]);
+  }, []);
 
   const handleDelete = async (id) => {
     try {
